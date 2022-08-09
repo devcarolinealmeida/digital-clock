@@ -23,6 +23,24 @@ let clock = () => {
 
 clock()
 
+//-------------------
+// date - today
 
+let todayIs = () => {
+    let date = new Date();
+    let today = date.getDate();
+    let currentMonth = date.getMonth() + 1;
+    let currentYear = date.getFullYear();
+    
+    today = today < 10 ? `0${today}` : today;
+    currentMonth = currentMonth < 10 ? `0${currentMonth}` : currentMonth
+
+    let timeToday = `${currentYear} - ${currentMonth} - ${today}`
+    document.getElementById("date").innerHTML = timeToday
+}
+
+todayIs()
+
+//-----------------
 
 
