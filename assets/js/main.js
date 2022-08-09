@@ -31,11 +31,19 @@ let todayIs = () => {
     let today = date.getDate();
     let currentMonth = date.getMonth() + 1;
     let currentYear = date.getFullYear();
+    let weekDay = date.getDay();
     
     today = today < 10 ? `0${today}` : today;
     currentMonth = currentMonth < 10 ? `0${currentMonth}` : currentMonth
 
-    let timeToday = `${currentYear} - ${currentMonth} - ${today}`
+    var week = ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
+    for (i = 0; i < week.length; i++) {
+        if (i == weekDay ) {
+            weekDay = week[i].toLocaleUpperCase()
+        }
+    }
+    
+    let timeToday = `${currentYear} - ${currentMonth} - ${today} - ${weekDay}`
     document.getElementById("date").innerHTML = timeToday
 }
 
