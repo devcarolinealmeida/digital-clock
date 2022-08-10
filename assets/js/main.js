@@ -43,7 +43,7 @@ let todayIs = () => {
         }
     }
     
-    let timeToday = `${currentYear} - ${currentMonth} - ${today} - ${weekDay}`
+    let timeToday = `${currentYear} \\ ${currentMonth} \\ ${today} - ${weekDay}`
     document.getElementById("date").innerHTML = timeToday
 }
 

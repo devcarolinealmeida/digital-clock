@@ -2,18 +2,20 @@
 
 
 body {
-    background: #0f3854;
     background: radial-gradient(ellipse at center,  #0a2e38  0%, #000000 70%);
     background-size: 100%;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
     text-align: center;
     justify-content: center;
 }
@@ -31,4 +33,24 @@ body {
 
 .text {
     font-size: 1rem;
+}
+
+@media screen and (min-width: 360px) and (max-width: 520px) {
+    #clock {
+        font-size: 3rem;
+        margin-top: .5em;
+    }
+    #date {
+        font-size: 1rem;
+    }
+    .text {
+        font-size: .6rem;
+    }
+}
+
+@media screen and (min-width: 521px) and (max-width: 912px) {
+    #clock {
+        font-size: 5rem;
+        margin-top: .3em;
+    }
 }
